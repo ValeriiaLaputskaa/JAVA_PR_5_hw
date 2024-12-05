@@ -10,7 +10,7 @@ public class FiniteAutomaton {
         F   // TEST
     }
 
-    public static String recognizeTestWord(String input) {
+    public static State recognizeTestWord(String input) {
         State state = State.S0;
 
         for (char ch : input.toCharArray()) {
@@ -52,6 +52,6 @@ public class FiniteAutomaton {
             }
         }
 
-        return state == State.F ? "F" : state.name();
+        return state;
     }
 }
